@@ -13,12 +13,19 @@ const foods = {
   soup: "Soup"
 }
 
+
 function App() {
+ 
+
+
+
   const [selection, setSelection] = useState('')
+  const [person, setPerson] = useState("derp")
   const onSelect = event => {
   const { value } = event.target
     setSelection(value)
   }
+
   const onReset = () => {
     setSelection('')
   }
@@ -55,6 +62,11 @@ function App() {
           }</h4>
 
     </section>
+    <div>
+      <h1>Person Information</h1>
+      <p>Name: {person}</p>
+    
+    </div>
     
     </div>
   );
