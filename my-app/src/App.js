@@ -15,12 +15,16 @@ const foods = {
 
 
 function App() {
- 
-
-
-
   const [selection, setSelection] = useState('')
   const [person, setPerson] = useState("derp")
+  const [count, setCount] = useState(0)
+
+  
+  const handleIncrement = () => {
+    setCount(count + 1)
+  }
+  
+
   const onSelect = event => {
   const { value } = event.target
     setSelection(value)
@@ -67,7 +71,9 @@ function App() {
       <p>Name: {person}</p>
     
     </div>
-    
+          <h2>Click Counter</h2>
+          <p>Count: {count}</p>
+          <button onClick={handleIncrement}>Increment</button>
     </div>
   );
 }
