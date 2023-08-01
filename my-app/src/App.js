@@ -7,6 +7,11 @@ const languages = {
   java: "Java",
   go: "Golang",
 }
+const foods = {
+  pizza: "Pizza",
+  steak: "Steak",
+  soup: "Soup"
+}
 
 function App() {
   const [selection, setSelection] = useState('')
@@ -34,6 +39,21 @@ function App() {
               : `You chose ${languages[selection]}. ${selection === 'js' ? 'WELL DONE! ❤️' :   ''}`
           }</h4>
           <button onClick={onReset}>Reset</button>
+    </section>
+    <section>
+      <p>Choose the best food</p>
+      <select value={selection} onChange={onSelect}>
+            <option value="">Make selection</option>
+            <option value="pizza">pizza</option>
+            <option value="steak">steak</option>
+            <option value="soup">soup</option>
+          </select>
+          <h4 id="info">{
+            !selection
+              ? 'No selection made'
+              : `You chose ${foods[selection]}. ${selection === 'pizza' ? 'WELL DONE! ❤️' :   ''}`
+          }</h4>
+
     </section>
     
     </div>
