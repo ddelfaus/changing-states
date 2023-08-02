@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react'
+import Thing from './Thing'
 
 const languages = {
   js: "JavaScript",
@@ -35,6 +36,7 @@ function App() {
   }
   return (
     <div className="App">
+      <Thing/>
         <section>
           <h2>Opinionated Form</h2>
           <p>Choose the best programming language:</p>
