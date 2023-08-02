@@ -17,7 +17,21 @@ const foods = {
   steak: "Steak",
   soup: "Soup"
 }
+const fam = [
+  {
+    name:"stank",
+    childern: [
+      {
+          name:"dank"
+      },
+      {
+          name:"danker"
+      
+      }
 
+    ]
+  }
+]
 
 function App() {
   const [selection, setSelection] = useState('')
@@ -43,7 +57,7 @@ function App() {
   return (
     <div className="App">
       <Thing/>
-      <Person name={student} />
+      <Person name={student} fam = {fam}  />
         <section>
           <h2>Opinionated Form</h2>
           <p>Choose the best programming language:</p>
