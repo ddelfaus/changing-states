@@ -2,6 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react'
 import Thing from './Thing'
+import Person from './Person'
+
+
+
 
 const languages = {
   js: "JavaScript",
@@ -17,8 +21,10 @@ const foods = {
 
 function App() {
   const [selection, setSelection] = useState('')
-  const [person, setPerson] = useState("derp")
+  const [student, setStudent] = useState("derp")
   const [count, setCount] = useState(0)
+
+  console.log("efafeaaeffefawefaweafefawfeawefawefaw")
 
   
   const handleIncrement = () => {
@@ -37,6 +43,7 @@ function App() {
   return (
     <div className="App">
       <Thing/>
+      <Person name={student} />
         <section>
           <h2>Opinionated Form</h2>
           <p>Choose the best programming language:</p>
@@ -70,7 +77,7 @@ function App() {
     </section>
     <div>
       <h1>Person Information</h1>
-      <p>Name: {person}</p>
+      <p>Name: {student}</p>
     
     </div>
           <h2>Click Counter</h2>
