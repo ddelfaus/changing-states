@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Thing from './Thing'
 import Person from './Person'
 import ScoreBoard from './ScoreBoard'
+import Bulb from './Bulb'
 
 
 
@@ -99,6 +100,7 @@ function App() {
           <p>Count: {count}</p>
           <button onClick={handleIncrement}>Increment</button>
           <ScoreBoard/>
+          <Bulb/>
     </div>
     
   );
