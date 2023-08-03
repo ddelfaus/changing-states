@@ -3,7 +3,7 @@ import './App.css';
 import { useState } from 'react'
 import Thing from './Thing'
 import Person from './Person'
-
+import ScoreBoard from './ScoreBoard'
 
 
 
@@ -54,6 +54,7 @@ function App() {
   const onReset = () => {
     setSelection('')
   }
+
   return (
     <div className="App">
       <Thing/>
@@ -97,7 +98,9 @@ function App() {
           <h2>Click Counter</h2>
           <p>Count: {count}</p>
           <button onClick={handleIncrement}>Increment</button>
+          <ScoreBoard/>
     </div>
+    
   );
 }
 
